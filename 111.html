@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    p
+    {
+        width: 100px;
+        display:block;
+        white-space:nowrap; 
+        overflow:hidden; 
+        text-overflow:ellipsis;
+    }
+    /*div
+    {*/
+        /*overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;*/
+        /*overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }*/
+    div {
+        width: 200px;
+        /*height: 100px;*/
+        position:relative;
+        line-height:1.4em;
+        /* 3 times the line-height to show 3 lines */
+        height:4.2em;
+        overflow:hidden;
+    }
+    div::after {
+        content:"...";
+        font-weight:bold;
+        position:absolute;
+        bottom:0;
+        right:0;
+        padding:0 20px 1px 45px;
+        background:url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
+    }
+    section
+    {
+        width: 200px;
+        height: 100px;
+    }
+    main
+    {
+        width: 200px;
+        height: 300px;
+        background-color: rebeccapurple;
+        opacity: 0;
+        transition: opacity 2s;
+    }
+    main:hover
+    {
+        opacity: 0.8;
+    }
+</style>
+<body>
+    <main></main>
+    <a href="">lksjdahflkasjdhgflksadjghf</a><a href=""></a>
+    <p title="滚">
+        奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货
+    </p>
+    <div title="尼玛">
+        奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货
+    </div>
+    <br>
+    <section id="sec" title="haha">
+        奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货奥斯卡大家分  工会埃里克森记得发货啦可视对讲发货拉斯克奖的规范化卡萨丁积分工会拉克丝记得发货
+    </section>
+    <script>
+        console.log(parseInt('20.2',8))
+        var a = null || undefined ||'123'
+        console.log(a)
+        var sec = document.getElementById('sec').innerHTML
+        console.log(sec)
+        var str = sec.substr(0,200)
+        console.log(str)
+        var laststr = str.substr(-10)
+        console.log(laststr)
+        // var newstr = str.replace(laststr,'.....')
+        var otherstr = '......'
+        var otherstrs = str.concat(otherstr)
+        document.getElementById('sec').innerHTML = otherstrs
+    </script>
+</body>
+</html>
